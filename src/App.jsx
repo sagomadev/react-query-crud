@@ -1,5 +1,7 @@
+import Products from "./components/Products";
+
 function App() {
-  return <h1>React Query CRUD</h1>;
+  return <Products />;
 }
 
 export default App;

@@ -1,6 +1,21 @@
+import { useMutation } from "@tanstack/react-query";
+import { createProduct } from "../api/productsAPI";
+
 function ProductForm() {
+  const addProductMutation = useMutation({
+    mutationFn: createProduct,
+  });
+
+  const handleSubmit = (evnt) => {
+    evnt.preventDefault();
+    const formData = new FormData(evnt.target);
+    console.log(formData);
+    const product = Object.fromEntries(formData);
+    addProductMutation.mutate({ ...product, inStock: true });
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <label htmlFor="name">Name</label>
       <input type="text" name="name" id="name" />
 

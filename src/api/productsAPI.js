@@ -8,3 +8,7 @@ export const getProducts = async () => {
   const res = await productsAPI.get("/products");
   return res.data;
 };
+
+export const createProduct = (product) => {
+  productsAPI.post("/products", product);
+};

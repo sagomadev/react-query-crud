@@ -27,6 +27,27 @@
       "description": "asdasdad new",
       "inStock": true,
       "id": 4
+    },
+    {
+      "name": "servidor",
+      "description": "dsfsfv dfsdfsdf ",
+      "price": "1000",
+      "inStock": true,
+      "id": 5
+    },
+    {
+      "name": "sadasd",
+      "description": "asdasd",
+      "price": "1000",
+      "inStock": true,
+      "id": 6
+    },
+    {
+      "name": "sadasdssadsd",
+      "description": "asdasd",
+      "price": "1000",
+      "inStock": true,
+      "id": 7
     }
   ]
 }

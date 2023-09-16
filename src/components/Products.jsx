@@ -7,7 +7,11 @@ export default function Products() {
     data: products,
     isError,
     error,
-  } = useQuery(["products"], getProducts);
+  } = useQuery({
+    queryKey: ["products"],
+    queryFn: getProducts,
+    select: (products) => products.sort((a, b) => a.price - b.price),
+  });
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error:{error.message}</div>;

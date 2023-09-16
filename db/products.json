@@ -9,29 +9,29 @@
     },
     {
       "name": "pc",
-      "price": "1000",
+      "price": "799",
       "description": "asdsad",
       "inStock": true,
       "id": 2
     },
     {
-      "name": "adsad",
-      "price": "12123",
-      "description": "asdasdad",
+      "name": "iPhone 14",
+      "price": "1299",
+      "description": "overrated smartphone",
       "inStock": true,
       "id": 3
     },
     {
-      "name": "new",
-      "price": "12321",
-      "description": "asdasdad new",
+      "name": "minisforum",
+      "price": "399",
+      "description": "Mini Pc",
       "inStock": true,
       "id": 4
     },
     {
-      "name": "servidor",
-      "description": "dsfsfv dfsdfsdf ",
-      "price": "1000",
+      "name": "Macbook Pro",
+      "description": "Apple laptop ",
+      "price": "2200",
       "inStock": true,
       "id": 5
     },

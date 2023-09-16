@@ -9,6 +9,7 @@ export const getProducts = async () => {
   return res.data;
 };
 
-export const createProduct = (product) => {
+export const createProduct = (product) =>
   productsAPI.post("/products", product);
-};
+
+export const deleteProduct = (id) => productsAPI.delete(`/products/${id}`);

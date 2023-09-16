@@ -1,5 +1,5 @@
-import { useQuery } from "@tanstack/react-query";
-import { getProducts } from "../api/productsAPI";
+import { useMutation, useQuery } from "@tanstack/react-query";
+import { deleteProduct, getProducts } from "../api/productsAPI";
 
 export default function Products() {
   const {
@@ -13,6 +13,10 @@ export default function Products() {
     select: (products) => products.sort((a, b) => a.price - b.price),
   });
 
+  const deleteProductMutation = useMutation({
+    mutationFn: deleteProduct,
+  });
+
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error:{error.message}</div>;
 
@@ -23,7 +27,7 @@ export default function Products() {
           <h2>{product.name}</h2>
           <p>{product.description}</p>
           <p>{product.price}</p>
-          <button>Delete</button>
+          <button onClick={() => deleteProduct(product.id)}>Delete</button>
           <input type="checkbox" name="stock" id="stock" />
           <label htmlFor="stock">In Stock</label>
         </li>

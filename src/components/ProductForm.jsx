@@ -5,7 +5,7 @@ function ProductForm() {
   const queryClient = useQueryClient();
   const addProductMutation = useMutation({
     mutationFn: createProduct,
-    onSuccess: () => queryClient.invalidateQueries(),
+    onSuccess: () => queryClient.invalidateQueries("products"),
   });
 
   const handleSubmit = (evnt) => {

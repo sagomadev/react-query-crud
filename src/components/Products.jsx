@@ -27,7 +27,9 @@ export default function Products() {
           <h2>{product.name}</h2>
           <p>{product.description}</p>
           <p>{product.price}</p>
-          <button onClick={() => deleteProduct(product.id)}>Delete</button>
+          <button onClick={() => deleteProductMutation(product.id)}>
+            Delete
+          </button>
           <input type="checkbox" name="stock" id="stock" />
           <label htmlFor="stock">In Stock</label>
         </li>

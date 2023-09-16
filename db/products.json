@@ -41,13 +41,6 @@
       "price": "1000",
       "inStock": true,
       "id": 6
-    },
-    {
-      "name": "sadasdssadsd",
-      "description": "asdasd",
-      "price": "1000",
-      "inStock": true,
-      "id": 7
     }
   ]
 }

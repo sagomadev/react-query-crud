@@ -13,3 +13,6 @@ export const createProduct = (product) =>
   productsAPI.post("/products", product);
 
 export const deleteProduct = (id) => productsAPI.delete(`/products/${id}`);
+
+export const updateProduct = (product) =>
+  productsAPI.put(`/products/${product.id}`, product);

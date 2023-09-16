@@ -1,7 +1,9 @@
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { deleteProduct, getProducts } from "../api/productsAPI";
 
 export default function Products() {
+  const queryClient = useQueryClient();
+
   const {
     isLoading,
     data: products,
@@ -15,9 +17,11 @@ export default function Products() {
 
   const deleteProductMutation = useMutation({
     mutationFn: deleteProduct,
+    onSuccess: () => queryClient.invalidateQueries("products"),
   });
 
   if (isLoading) return <div>Loading...</div>;
+
   if (isError) return <div>Error:{error.message}</div>;
 
   return (
